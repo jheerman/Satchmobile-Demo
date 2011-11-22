@@ -1,6 +1,6 @@
 How it works
 ===============================
-Satchmo [1] is a free, open sourced, online store built on a solid Python web framework called Django [2].  Satchmobile [3] provides restful web services that run on top of Satchmo to expose and consume data as needed.  The purpose of this demo is to show how customers can access your catalog from any Android 2.2+ device.  The demo was written in C# .Net using Mono [4], an open source .Net development framework.  Mono for Android [5] allows you to create .Net based mobile applications while taking advantage of native Android APIs.  
+Satchmo [1] is a free, open source, online store built on a solid Python web framework called Django [2].  Satchmobile [3] provides restful web services that run on top of Satchmo to expose and consume data as needed.  The purpose of this demo is to show how customers can access your catalog from any Android 2.2+ device.  The demo was written in C# .Net using Mono [4], an open source .Net development framework.  Mono for Android [5] allows you to create .Net based mobile applications while taking advantage of native Android APIs.  
 
 This demo also leverages the open source JSON library, JSON.Net [6], created by JamesNK.  A port of JSON.Net was provided by Greg Shackles [7].
 
