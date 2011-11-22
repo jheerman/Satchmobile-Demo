@@ -8,7 +8,7 @@
 		<TextView android:id="@+id/productListName"
 			android:layout_height="wrap_content"
 			android:layout_width="wrap_content"
-			android:layout_marginTop="20dp"
+			android:layout_marginTop="10dp"
 			android:textSize="16px"
 			android:textColor="#fff"
 			android:textStyle="bold"
@@ -31,11 +31,4 @@
 			android:layout_toRightOf="@+id/productListImage"
 			android:layout_below="@+id/productListPriceRange"
 			style="?android:attr/ratingBarStyleSmall"/>
-		
-		<ImageView android:id="@+id/productListElipse"
-			android:src="@android:drawable/ic_menu_more"
-			android:layout_alignParentRight="true"
-			android:layout_centerVertical="true"
-			android:layout_height="wrap_content"
-			android:layout_width="wrap_content"/>
 </merge>

@@ -61,9 +61,6 @@ namespace SatchmobileDemo
 			// aapt resource value: 0x7f060002
 			public const int parentContainer = 2131099650;
 			
-			// aapt resource value: 0x7f06000b
-			public const int productListElipse = 2131099659;
-			
 			// aapt resource value: 0x7f060007
 			public const int productListImage = 2131099655;
 			

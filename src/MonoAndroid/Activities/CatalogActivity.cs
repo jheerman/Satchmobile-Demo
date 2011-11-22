@@ -39,16 +39,21 @@ namespace SatchmobileDemo
 			
 			var action = Intent.GetStringExtra ("action");
 			
-			switch (action.ToLower ())
+			switch (action)
 			{
 				case "featured":
 					Task.Factory
 						.StartNew(() =>
 							GetFeaturedProducts(GetString(Resource.String.store_url)))
 						.ContinueWith(task =>
-							RunOnUiThread(() => RenderFeaturedProducts(task.Result)));
+							RunOnUiThread(() => RenderProducts(task.Result)));
 					break;
 				case "recent":
+					Task.Factory
+						.StartNew(() =>
+							GetRecentAdditions(GetString(Resource.String.store_url)))
+						.ContinueWith(task =>
+							RunOnUiThread(() => RenderProducts(task.Result)));
 					break;
 				default:
 					break;
@@ -72,7 +77,24 @@ namespace SatchmobileDemo
 			}
 		}
 		
-		private void RenderFeaturedProducts (List<Product> products)
+		public List<Product> GetRecentAdditions (string storeUrl)
+		{
+			try
+			{
+				using (Stream stream =  new WebClient().OpenRead(string.Format("{0}/ws/product/view/recent", storeUrl)))
+					using (StreamReader reader = new StreamReader(stream))
+					{
+						var response = reader.ReadToEnd().ToString();
+						return JsonConvert.DeserializeObject<List<Product>>(response);
+					}
+			}
+			catch (Exception)
+			{
+				return null;
+			}
+		}
+		
+		private void RenderProducts (List<Product> products)
 		{
 			if (products != null)
 			{

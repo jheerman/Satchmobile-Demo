@@ -28,6 +28,15 @@ namespace SatchmobileDemo
 				intent.PutExtra("action", "featured");
 				StartActivity(intent);
 			};
+			
+			var recent = FindViewById<Button>(Resource.Id.cmdRecent);
+			
+			recent.Click += delegate {
+				var intent = new Intent();
+				intent.SetClass (this, typeof(CatalogActivity));
+				intent.PutExtra("action", "recent");
+				StartActivity(intent);
+			};
 		}
 	}
 }
