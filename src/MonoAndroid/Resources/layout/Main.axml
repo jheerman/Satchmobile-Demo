@@ -1,8 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+	android:orientation="vertical"
 	android:id="@+id/parentContainer"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+	android:padding="25dp"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	
+	<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@+id/title"
+		android:text="Satchmobile Demo"
+		android:padding="10dp"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textSize="14pt"/>
+	
+	<Button xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@+id/cmdFeatured"
+		android:padding="5dp"
+		android:width="350dp"
+		android:layout_gravity="center"
+		android:textStyle="bold"
+		android:textSize="10pt"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="20dp"
+		android:text="View Featured"/>
+		
+	<Button xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@+id/cmdRecent"
+		android:padding="5dp"
+		android:width="350dp"
+		android:layout_gravity="center"
+		android:textStyle="bold"
+		android:textSize="10pt"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="20dp"
+		android:text="View Recent"/>
+	
+	<Button xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@+id/cmdSearch"
+		android:padding="5dp"
+		android:width="350dp"
+		android:layout_gravity="center"
+		android:textStyle="bold"
+		android:textSize="10pt"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Search Catalog"/>
 </LinearLayout>
 

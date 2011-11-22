@@ -12,16 +12,16 @@ using Android.Widget;
 
 namespace SatchmobileDemo
 {
-	[Activity (Label = "SplashActivity", MainLauncher=true, Theme="@style/Theme.Splash", NoHistory = true)]			
+	[Activity (Label = "SplashActivity", MainLauncher=true, Theme="@style/Theme.Splash", NoHistory = true)]
 	public class SplashActivity : Activity
 	{
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
-                        
-            Intent intent = new Intent();
-            intent.SetClass (this, typeof(MainActivity));
-            StartActivity(intent);
+			
+			Intent intent = new Intent();
+			intent.SetClass (this, typeof(MainActivity));
+			StartActivity(intent);
 		}
 	}
 }

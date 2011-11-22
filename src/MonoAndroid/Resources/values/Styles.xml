@@ -2,5 +2,9 @@
 	<style name="Theme.Splash" parent="android:Theme">
 		<item name="android:windowBackground">@drawable/loading</item>
 		<item name="android:windowNoTitle">true</item>
-	</style>	
+	</style>
+	<style name="Theme.Default" parent="android:Theme">
+		<item name="android:windowBackground">@drawable/shine</item>
+		<item name="android:windowNoTitle">true</item>
+	</style>
 </resources>

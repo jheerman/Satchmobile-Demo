@@ -12,18 +12,22 @@ using Android.Widget;
 
 namespace SatchmobileDemo
 {
-	[Activity (Label = "MainActivity")]			
+	[Activity (Label = "MainActivity", Theme="@style/Theme.Default")]
 	public class MainActivity : Activity
 	{
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
+			SetContentView (Resource.Layout.Main);
 			
-			var container = FindViewById<LinearLayout>(Resource.Id.parentContainer);
+			var featured = FindViewById<Button>(Resource.Id.cmdFeatured);
 			
-			TextView message = new TextView(this);
-			message.Text = "Satchmobile Demo";
-			container.AddView (message);
+			featured.Click += delegate {
+				var intent = new Intent();
+				intent.SetClass (this, typeof(CatalogActivity));
+				intent.PutExtra("action", "featured");
+				StartActivity(intent);
+			};
 		}
 	}
 }

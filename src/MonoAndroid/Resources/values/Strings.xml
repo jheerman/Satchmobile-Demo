@@ -2,4 +2,5 @@
 <resources>
 	<string name="hello">Hello World, Click Me!</string>
 	<string name="app_name">Satchmobile-Demo</string>
+	<string name="store_url">http://50.56.79.53</string>
 </resources>

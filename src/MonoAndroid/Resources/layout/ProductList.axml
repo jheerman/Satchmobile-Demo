@@ -1,0 +1,41 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+	
+		<ImageView android:id="@+id/productListImage"
+			android:padding="10dp"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"/>
+		
+		<TextView android:id="@+id/productListName"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:layout_marginTop="20dp"
+			android:textSize="16px"
+			android:textColor="#fff"
+			android:textStyle="bold"
+			android:layout_toRightOf="@+id/productListImage"/>
+		
+		<TextView android:id="@+id/productListPriceRange"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:textSize="14px"
+			android:textColor="#fff"
+			android:layout_toRightOf="@+id/productListImage"
+			android:layout_below="@+id/productListName"/>
+		
+		<RatingBar android:id="@+id/productListRating"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:numStars="5"
+			android:stepSize="1"
+			android:isIndicator="true"
+			android:layout_toRightOf="@+id/productListImage"
+			android:layout_below="@+id/productListPriceRange"
+			style="?android:attr/ratingBarStyleSmall"/>
+		
+		<ImageView android:id="@+id/productListElipse"
+			android:src="@android:drawable/ic_menu_more"
+			android:layout_alignParentRight="true"
+			android:layout_centerVertical="true"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"/>
+</merge>
