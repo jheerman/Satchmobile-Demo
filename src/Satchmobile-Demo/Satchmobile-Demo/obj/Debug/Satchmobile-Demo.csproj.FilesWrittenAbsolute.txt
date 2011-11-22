@@ -1,0 +1,16 @@
+/Users/jheerman/Projects/Satchmobile-Demo/Satchmobile-Demo/Satchmobile-Demo/bin/Debug/Satchmobile-Demo.dll.mdb
+/Users/jheerman/Projects/Satchmobile-Demo/Satchmobile-Demo/Satchmobile-Demo/bin/Debug/Satchmobile-Demo.dll
+/Users/jheerman/Projects/Satchmobile-Demo/Satchmobile-Demo/Satchmobile-Demo/bin/Debug/Satchmobile-Demo.Satchmobile-Demo.apk
+/Users/jheerman/Projects/Satchmobile-Demo/Satchmobile-Demo/Satchmobile-Demo/obj/Debug/android/bin/Satchmobile-Demo.Satchmobile-Demo.apk
+/Users/jheerman/Projects/Satchmobile-Demo/Satchmobile-Demo/Satchmobile-Demo/obj/Debug/res/layout/main.axml
+/Users/jheerman/Projects/Satchmobile-Demo/Satchmobile-Demo/Satchmobile-Demo/obj/Debug/res/values/strings.xml
+/Users/jheerman/Projects/Satchmobile-Demo/Satchmobile-Demo/Satchmobile-Demo/obj/Debug/res/drawable/icon.png
+/Users/jheerman/Projects/Satchmobile-Demo/Satchmobile-Demo/Satchmobile-Demo/obj/Debug/res/values/styles.xml
+/Users/jheerman/Projects/Satchmobile-Demo/Satchmobile-Demo/Satchmobile-Demo/obj/Debug/res/drawable/loading.png
+/Users/jheerman/Projects/Satchmobile-Demo/Satchmobile-Demo/Satchmobile-Demo/obj/Debug/res/drawable/shine.png
+/Users/jheerman/Projects/Satchmobile-Demo/Satchmobile-Demo/Satchmobile-Demo/obj/Debug/R.cs.flag
+/Users/jheerman/.local/share/Xamarin/Mono for Android/debug.keystore
+/Users/jheerman/Projects/Satchmobile-Demo/Satchmobile-Demo/Satchmobile-Demo/bin/Debug/Satchmobile-Demo.Satchmobile-Demo-Signed.apk
+/Users/jheerman/Projects/Satchmobile-Demo/Satchmobile-Demo/Satchmobile-Demo/obj/Debug/uploadflags.txt
+/Users/jheerman/Projects/Satchmobile-Demo/Satchmobile-Demo/Satchmobile-Demo/obj/Debug/Satchmobile-Demo.dll
+/Users/jheerman/Projects/Satchmobile-Demo/Satchmobile-Demo/Satchmobile-Demo/obj/Debug/Satchmobile-Demo.dll.mdb
