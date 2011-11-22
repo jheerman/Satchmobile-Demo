@@ -29,6 +29,12 @@ namespace SatchmobileDemo
 			// aapt resource value: 0x7f020000
 			public const int Icon = 2130837504;
 			
+			// aapt resource value: 0x7f020001
+			public const int loading = 2130837505;
+			
+			// aapt resource value: 0x7f020002
+			public const int shine = 2130837506;
+			
 			private Drawable()
 			{
 			}
@@ -37,8 +43,8 @@ namespace SatchmobileDemo
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f050000
-			public const int parentContainer = 2131034112;
+			// aapt resource value: 0x7f060000
+			public const int parentContainer = 2131099648;
 			
 			private Id()
 			{
@@ -66,6 +72,17 @@ namespace SatchmobileDemo
 			public const int hello = 2130968576;
 			
 			private String()
+			{
+			}
+		}
+		
+		public partial class Style
+		{
+			
+			// aapt resource value: 0x7f050000
+			public const int Theme_Splash = 2131034112;
+			
+			private Style()
 			{
 			}
 		}
