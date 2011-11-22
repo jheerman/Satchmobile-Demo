@@ -34,9 +34,6 @@ namespace SatchmobileDemo
 			
 			SetContentView (Resource.Layout.Catalog);
 			
-			var title = new TextView(this);
-			title.Text = "Catalog Items";
-			
 			var action = Intent.GetStringExtra ("action");
 			
 			switch (action)
