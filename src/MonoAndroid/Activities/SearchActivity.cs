@@ -72,7 +72,7 @@ namespace SatchmobileDemo
 				var alertDialog = new AlertDialog.Builder(this).Create();
 				alertDialog.SetTitle("Search Results");
 				alertDialog.SetMessage("We were unable to find any matches in the catalog.");
-				alertDialog.SetIcon(Resource.Drawable.Icon);
+				alertDialog.SetIcon(Resource.Drawable.icon);
 				alertDialog.SetButton("OK", (o, e) => 
 				{
 					alertDialog.Dismiss(); 

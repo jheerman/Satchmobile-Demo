@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace SatchmobileDemo
 {
-	[Activity (Label = "SplashActivity", MainLauncher=true, Theme="@style/Theme.Splash", NoHistory = true)]
+	[Activity (Label = "Satchmobile", MainLauncher=true, Theme="@style/Theme.Splash", NoHistory = true)]
 	public class SplashActivity : Activity
 	{
 		protected override void OnCreate (Bundle bundle)
