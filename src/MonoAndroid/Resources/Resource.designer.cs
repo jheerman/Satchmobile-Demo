@@ -43,6 +43,9 @@ namespace SatchmobileDemo
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f070000
+			public const int catalogContainer = 2131165184;
+			
 			// aapt resource value: 0x7f070001
 			public const int catalogList = 2131165185;
 			
@@ -54,9 +57,6 @@ namespace SatchmobileDemo
 			
 			// aapt resource value: 0x7f070006
 			public const int cmdSearch = 2131165190;
-			
-			// aapt resource value: 0x7f070000
-			public const int featuredContainer = 2131165184;
 			
 			// aapt resource value: 0x7f070002
 			public const int parentContainer = 2131165186;

@@ -53,7 +53,6 @@
     <Compile Include="Activities\MainActivity.cs" />
     <Compile Include="Activities\SplashActivity.cs" />
     <Compile Include="Activities\CatalogActivity.cs" />
-    <Compile Include="Views\ProductListView.cs" />
     <Compile Include="Views\ProductListAdapter.cs" />
     <Compile Include="Models\CatalogItem.cs" />
     <Compile Include="Models\Product.cs" />
