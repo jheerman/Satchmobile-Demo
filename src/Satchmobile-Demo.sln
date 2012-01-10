@@ -3,18 +3,36 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonoAndroid-Demo", "MonoAndroid\MonoAndroid-Demo.csproj", "{A9AAF8D0-17B5-4287-B879-9C2E0626A0A9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonoTouch-Demo", "MonoTouch-Demo\MonoTouch-Demo.csproj", "{A4EE8719-F661-4D3A-A53B-CDE028EEB9A3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+		Release|iPhone = Release|iPhone
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A4EE8719-F661-4D3A-A53B-CDE028EEB9A3}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
+		{A4EE8719-F661-4D3A-A53B-CDE028EEB9A3}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
+		{A4EE8719-F661-4D3A-A53B-CDE028EEB9A3}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{A4EE8719-F661-4D3A-A53B-CDE028EEB9A3}.Debug|iPhone.Build.0 = Debug|iPhone
+		{A4EE8719-F661-4D3A-A53B-CDE028EEB9A3}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{A4EE8719-F661-4D3A-A53B-CDE028EEB9A3}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{A4EE8719-F661-4D3A-A53B-CDE028EEB9A3}.Release|Any CPU.ActiveCfg = Release|iPhoneSimulator
+		{A4EE8719-F661-4D3A-A53B-CDE028EEB9A3}.Release|Any CPU.Build.0 = Release|iPhoneSimulator
+		{A4EE8719-F661-4D3A-A53B-CDE028EEB9A3}.Release|iPhone.ActiveCfg = Release|iPhone
+		{A4EE8719-F661-4D3A-A53B-CDE028EEB9A3}.Release|iPhone.Build.0 = Release|iPhone
+		{A4EE8719-F661-4D3A-A53B-CDE028EEB9A3}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{A4EE8719-F661-4D3A-A53B-CDE028EEB9A3}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 		{A9AAF8D0-17B5-4287-B879-9C2E0626A0A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A9AAF8D0-17B5-4287-B879-9C2E0626A0A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9AAF8D0-17B5-4287-B879-9C2E0626A0A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9AAF8D0-17B5-4287-B879-9C2E0626A0A9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = MonoAndroid\MonoAndroid-Demo.csproj
+		StartupItem = MonoTouch-Demo\MonoTouch-Demo.csproj
 	EndGlobalSection
 EndGlobal

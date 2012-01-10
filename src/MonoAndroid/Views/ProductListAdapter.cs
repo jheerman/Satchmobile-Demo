@@ -64,13 +64,13 @@ namespace SatchmobileDemo
 				using (HttpWebResponse response = (HttpWebResponse) request.GetResponse())
 					using (Stream responseStream = response.GetResponseStream()) 
 					{
-							MemoryStream memoryStream = new MemoryStream();
-							responseStream.CopyTo(memoryStream);
-							G.Bitmap bitmap = G.BitmapFactory.DecodeByteArray (
-								memoryStream.GetBuffer (), 0, (int) memoryStream.Length);
-							
-							D.Drawable image = new D.BitmapDrawable(bitmap);
-							view.FindViewById<ImageView>(Resource.Id.productListImage).SetImageDrawable(image);
+						MemoryStream memoryStream = new MemoryStream();
+						responseStream.CopyTo(memoryStream);
+						G.Bitmap bitmap = G.BitmapFactory.DecodeByteArray (
+							memoryStream.GetBuffer (), 0, (int) memoryStream.Length);
+						
+						D.Drawable image = new D.BitmapDrawable(bitmap);
+						view.FindViewById<ImageView>(Resource.Id.productListImage).SetImageDrawable(image);
 					}
 			}
 			catch (Exception)
