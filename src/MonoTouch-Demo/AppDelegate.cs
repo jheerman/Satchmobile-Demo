@@ -26,9 +26,9 @@ namespace MonoTouchDemo
 		public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 		{
 			window = new UIWindow (UIScreen.MainScreen.Bounds);
+			viewController = new MainViewController();
 			
-			viewController = new MainViewController ();
-			window.RootViewController = viewController;
+			window.RootViewController = new UINavigationController(viewController);
 			window.MakeKeyAndVisible ();
 			
 			return true;

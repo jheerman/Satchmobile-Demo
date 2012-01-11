@@ -83,10 +83,20 @@
     <Compile Include="Controllers\SearchViewController.designer.cs">
       <DependentUpon>SearchViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\FeaturedViewController.cs" />
+    <Compile Include="Controllers\FeaturedViewController.designer.cs">
+      <DependentUpon>FeaturedViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\NavigationController.cs" />
+    <Compile Include="Controllers\NavigationController.designer.cs">
+      <DependentUpon>NavigationController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Controllers\MainViewController.xib" />
     <InterfaceDefinition Include="Controllers\SearchViewController.xib" />
+    <InterfaceDefinition Include="Controllers\FeaturedViewController.xib" />
+    <InterfaceDefinition Include="Controllers\NavigationController.xib" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

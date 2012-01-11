@@ -8,10 +8,8 @@ using MonoTouch.Foundation;
 
 namespace MonoTouchDemo
 {
-	[Register ("MainViewController")]
-	partial class MainViewController
+	[Register ("NavigationController")]
+	partial class NavigationController
 	{
-		[Outlet]
-		MonoTouch.UIKit.UINavigationBar mainNavigation { get; set; }
 	}
 }

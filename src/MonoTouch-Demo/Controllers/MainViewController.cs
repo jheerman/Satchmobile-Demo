@@ -7,8 +7,6 @@ namespace MonoTouchDemo
 {
 	public partial class MainViewController : SatchmobileBaseViewController
 	{
-		const string _storeUrl = "http://50.56.79.53";
-		
 		public class SearchDelegate : UISearchBarDelegate 
         {
                 UIViewController _hostController;
@@ -21,7 +19,6 @@ namespace MonoTouchDemo
                 public override void SearchButtonClicked (UISearchBar bar)
                 {
                         bar.ResignFirstResponder ();
-
                         _hostController.NavigationController.PushViewController(
                                         new SearchViewController(bar.Text), true);
                 }
@@ -34,6 +31,7 @@ namespace MonoTouchDemo
 		
 		public MainViewController () : base ("MainViewController", null)
 		{
+			
 		}
 		
 		public override void DidReceiveMemoryWarning ()
@@ -49,6 +47,9 @@ namespace MonoTouchDemo
 			base.ViewDidLoad ();
 			
 			View.AddSubview (_backgroundImage);	
+			NavigationItem.BackBarButtonItem = new UIBarButtonItem("Home", UIBarButtonItemStyle.Plain, null);
+			NavigationItem.Title = "Satchmobile - Demo";
+			NavigationController.NavigationBar.BackgroundColor = UIColor.Black;
 			
 			var frame = new RectangleF(0, 0, View.Bounds.Size.Width, 40);
             var searchBar = new UISearchBar(frame)
@@ -60,6 +61,13 @@ namespace MonoTouchDemo
             };
     
             View.AddSubview (searchBar);
+			
+			var featured = new UIButton(new RectangleF(50, 100, 150, 50));
+			featured.SetTitle ("Featured", UIControlState.Normal);
+			featured.TouchDown += delegate {
+				NavigationController.PushViewController (new FeaturedViewController(), true);
+			};
+			View.AddSubview (featured);
 			//any additional setup after loading the view, typically from a nib.
 		}
 		
