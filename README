@@ -1,16 +1,17 @@
 How it works
 ===============================
-Satchmo [1] is a free, open source, online store built on a solid Python web framework called Django [2].  Satchmobile [3] provides restful web services that run on top of Satchmo to expose and consume data as needed.  The purpose of this demo is to show how customers can access your catalog from any Android 2.2+ device.  The demo was written in C# .Net using Mono [4], an open source .Net development framework.  Mono for Android [5] allows you to create .Net based mobile applications while taking advantage of native Android APIs.  
+Satchmo [1] is a free, open source, online store built on a solid Python web framework called Django [2].  Satchmobile [3] provides restful web services that run on top of Satchmo to expose and consume your product catalog data.  The purpose of this demo is to show how customers can access your catalog from any Android 2.2+ or iOS 5.0+ device.  The demo was written in C# .Net using Mono [4], an open source .Net development framework.  Mono for Android [5] allows you to create .Net based mobile applications while taking advantage of native Android APIs.  MonoTouch[9] gives you the same flexibility to create .Net apps for Apple iOS devices.  
 
-This demo also leverages the open source JSON library, JSON.Net [6], created by JamesNK.  A port of JSON.Net was provided by Greg Shackles [7].
+This demo also leverages the open source JSON.Net [6] library, created by JamesNK.  A port of JSON.Net was provided by Greg Shackles [7].
 
-For more information about mobile applications for Satchmo, please see Kessel [8].
+For more information about mobile applications for Satchmo, please see Satchmobile App [8].
 
 1: Satchmo: https://bitbucket.org/chris1610/satchmo/src/
 2: Django: http://www.djangoproject.com
-3: Satchmobile: https://bitbucket.org/sclaughl/satchmobile
+3: Satchmobile Web Services: https://bitbucket.org/sclaughl/satchmobile
 4: Mono: http://www.mono-project.com/
-5: Mono for Android: http://android.xamarin.com/
+5: Mono for Android: http://xamarin.com/monoforandroid
 6: Newtonsoft JSON.Net: http://json.codeplex.com/ 
 7: Mono port of JSON.Net: https://github.com/gshackles/Newtonsoft.Json
-8: Kessel: http://johnheerman.com/portfolio/
+8: Satchmobile: http://www.satchmobileapp.com
+9: MonoTouch: http://xamarin.com/monotouch
