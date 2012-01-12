@@ -15,48 +15,39 @@ namespace MonoTouchDemo
 	public partial class SearchViewController : CatalogBaseController
 	{
 		string _searchText = null;
-        WaitingView waiting = new WaitingView();
-        
-        public SearchViewController (string searchText) : base ("Search Results", "SearchViewController", null)
-        { 
-                _searchText = searchText;
-        }
+		WaitingView waiting = new WaitingView();
+		
+		public SearchViewController (string searchText) : base ("Search Results", "SearchViewController", null)
+		{
+			_searchText = searchText;
+		}
 		
 		public override void DidReceiveMemoryWarning ()
 		{
-			// Releases the view if it doesn't have a superview.
 			base.DidReceiveMemoryWarning ();
-			
-			// Release any cached data, images, etc that aren't in use.
 		}
 		
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
 			
-			//any additional setup after loading the view, typically from a nib.
+			waiting.Show ("Searching.  Please wait...");
+			
+			ThreadPool.QueueUserWorkItem (state =>
+			{
+				var result = ExecuteSearch (_searchText);
+				InvokeOnMainThread (() => 
+				{
+					catalogList.DataSource = new TableViewDataSource(result);
+					catalogList.ReloadData ();
+					waiting.Hide ();
+				});
+			});
 		}
 		
 		public override void ViewDidUnload ()
 		{
 			base.ViewDidUnload ();
-		
-			catalogList.BackgroundView = _backgroundImage;
-            waiting.Show ("Searching...Please wait.");
-            
-            ThreadPool.QueueUserWorkItem (state =>
-            {
-					var result = ExecuteSearch (_searchText);
-                    InvokeOnMainThread (() => 
-                    {
-                            catalogList.Source = new CatalogTableViewSource(this, result);
-                            catalogList.ReloadData ();
-                            waiting.Hide ();
-                    });
-            });
-			
-			// Release any retained subviews of the main view.
-			// e.g. myOutlet = null;
 		}
 		
 		private List<Product> ExecuteSearch (string query)
@@ -64,7 +55,7 @@ namespace MonoTouchDemo
 			try
 			{
 				using (Stream stream =  new WebClient()
-				       .OpenRead(string.Format("http://50.56.79.53/ws/search/?include_categories=0&keywords={0}", query)))
+					.OpenRead(string.Format("http://50.56.79.53/ws/search/?include_categories=0&keywords={0}", query)))
 					using (StreamReader reader = new StreamReader(stream))
 					{
 						var response = reader.ReadToEnd().ToString();
@@ -79,9 +70,7 @@ namespace MonoTouchDemo
 		
 		public override bool ShouldAutorotateToInterfaceOrientation (UIInterfaceOrientation toInterfaceOrientation)
 		{
-			// Return true for supported orientations
 			return (toInterfaceOrientation != UIInterfaceOrientation.PortraitUpsideDown);
 		}
 	}
 }
-

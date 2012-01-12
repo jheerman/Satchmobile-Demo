@@ -35,7 +35,7 @@
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">274</int>
 				<array class="NSMutableArray" key="NSSubviews">
-					<object class="IBUITableView" id="182834291">
+					<object class="IBUITableView" id="533020988">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">274</int>
 						<string key="NSFrameSize">{320, 460}</string>
@@ -84,9 +84,9 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">featuredList</string>
+						<string key="label">recentList</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="182834291"/>
+						<reference key="destination" ref="533020988"/>
 					</object>
 					<int key="connectionID">5</int>
 				</object>
@@ -103,7 +103,7 @@
 						<int key="objectID">1</int>
 						<reference key="object" ref="191373211"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="182834291"/>
+							<reference ref="533020988"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -120,13 +120,13 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">4</int>
-						<reference key="object" ref="182834291"/>
+						<reference key="object" ref="533020988"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
-				<string key="-1.CustomClassName">FeaturedViewController</string>
+				<string key="-1.CustomClassName">RecentProductViewController</string>
 				<string key="-1.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="-2.CustomClassName">UIResponder</string>
 				<string key="-2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -142,22 +142,22 @@
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<object class="IBPartialClassDescription">
-					<string key="className">FeaturedViewController</string>
+					<string key="className">RecentProductViewController</string>
 					<string key="superclassName">UIViewController</string>
 					<object class="NSMutableDictionary" key="outlets">
-						<string key="NS.key.0">featuredList</string>
+						<string key="NS.key.0">recentList</string>
 						<string key="NS.object.0">UITableView</string>
 					</object>
 					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<string key="NS.key.0">featuredList</string>
+						<string key="NS.key.0">recentList</string>
 						<object class="IBToOneOutletInfo" key="NS.object.0">
-							<string key="name">featuredList</string>
+							<string key="name">recentList</string>
 							<string key="candidateClassName">UITableView</string>
 						</object>
 					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/FeaturedViewController.h</string>
+						<string key="minorKey">./Classes/RecentProductViewController.h</string>
 					</object>
 				</object>
 			</array>

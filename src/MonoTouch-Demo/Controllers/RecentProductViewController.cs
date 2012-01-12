@@ -1,22 +1,21 @@
 using System.Drawing;
 using System;
 using System.Net;
-using System.IO;
 using System.Threading;
+using System.IO;
+using System.Collections.Generic;
 
 using Newtonsoft.Json;
 
 using MonoTouch.UIKit;
 using MonoTouch.Foundation;
-using System.Collections.Generic;
 
 namespace MonoTouchDemo
 {
-	public partial class FeaturedViewController : CatalogBaseController
+	public partial class RecentProductViewController : CatalogBaseController
 	{
 		WaitingView _waiting = new WaitingView();
-		
-		public FeaturedViewController () : base ("Featured Products", "FeaturedViewController", null)
+		public RecentProductViewController () : base ("Recent Products", "RecentProductViewController", null)
 		{ }
 		
 		public override void DidReceiveMemoryWarning ()
@@ -27,25 +26,31 @@ namespace MonoTouchDemo
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
-			_waiting.Show ("Getting Featured Products.  Please wait...");
+			
+			_waiting.Show ("Getting Recently Added.  Please wait...");
 			
 			ThreadPool.QueueUserWorkItem (state =>
 			{
-				var products = GetFeatured ();
+				var products = GetRecent ();
 				InvokeOnMainThread (() => 
 				{
-					featuredList.DataSource = new TableViewDataSource(products);
-					featuredList.ReloadData ();
+					recentList.DataSource = new TableViewDataSource(products);
+					recentList.ReloadData ();
 					_waiting.Hide ();
 				});
 			});
 		}
 		
-		private List<Product> GetFeatured()
+		public override void ViewDidUnload ()
+		{
+			base.ViewDidUnload ();
+		}
+		
+		private List<Product> GetRecent()
 		{
 			try
 			{
-				using (Stream stream =  new WebClient().OpenRead("http://50.56.79.53/ws/featured"))
+				using (Stream stream =  new WebClient().OpenRead("http://50.56.79.53/ws/product/view/recent"))
 					using (StreamReader reader = new StreamReader(stream))
 					{
 						var response = reader.ReadToEnd().ToString();
@@ -56,11 +61,6 @@ namespace MonoTouchDemo
 			{
 				return null;
 			}
-		}
-		
-		public override void ViewDidUnload ()
-		{
-			base.ViewDidUnload ();
 		}
 		
 		public override bool ShouldAutorotateToInterfaceOrientation (UIInterfaceOrientation toInterfaceOrientation)

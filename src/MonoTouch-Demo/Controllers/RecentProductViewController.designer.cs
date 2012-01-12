@@ -8,10 +8,10 @@ using MonoTouch.Foundation;
 
 namespace MonoTouchDemo
 {
-	[Register ("FeaturedViewController")]
-	partial class FeaturedViewController
+	[Register ("RecentProductViewController")]
+	partial class RecentProductViewController
 	{
 		[Outlet]
-		MonoTouch.UIKit.UITableView featuredList { get; set; }
+		MonoTouch.UIKit.UITableView recentList { get; set; }
 	}
 }
