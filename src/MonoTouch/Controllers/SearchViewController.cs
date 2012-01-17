@@ -2,11 +2,11 @@ using System.Drawing;
 using System;
 using System.IO;
 using System.Net;
+using System.Linq;
 using System.Collections.Generic;
 using System.Threading;
-
-using Newtonsoft.Json;
-
+using MonoTouchCore;
+using SatchmobileCore;
 using MonoTouch.UIKit;
 using MonoTouch.Foundation;
 
@@ -15,6 +15,7 @@ namespace MonoTouchDemo
 	public partial class SearchViewController : CatalogBaseController
 	{
 		string _searchText = null;
+		ProductRepository<Product> _productRepository = new ProductRepository<Product>();
 		WaitingView waiting = new WaitingView();
 		
 		public SearchViewController (string searchText) : base ("Search Results", "SearchViewController", null)
@@ -35,7 +36,7 @@ namespace MonoTouchDemo
 			
 			ThreadPool.QueueUserWorkItem (state =>
 			{
-				var result = ExecuteSearch (_searchText);
+				List<Product> result =_productRepository.Search(_searchText);
 				InvokeOnMainThread (() => 
 				{
 					catalogList.DataSource = new TableViewDataSource(result);
@@ -48,24 +49,6 @@ namespace MonoTouchDemo
 		public override void ViewDidUnload ()
 		{
 			base.ViewDidUnload ();
-		}
-		
-		private List<Product> ExecuteSearch (string query)
-		{
-			try
-			{
-				using (Stream stream =  new WebClient()
-					.OpenRead(string.Format("http://50.56.79.53/ws/search/?include_categories=0&keywords={0}", query)))
-					using (StreamReader reader = new StreamReader(stream))
-					{
-						var response = reader.ReadToEnd().ToString();
-						return JsonConvert.DeserializeObject<List<Product>>(response);
-					}
-			}
-			catch (Exception)
-			{
-				return null;
-			}
 		}
 		
 		public override bool ShouldAutorotateToInterfaceOrientation (UIInterfaceOrientation toInterfaceOrientation)

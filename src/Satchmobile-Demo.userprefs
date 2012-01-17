@@ -1,14 +1,15 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="MonoTouch/Controllers/FeaturedViewController.cs">
+    <Files>
+      <File FileName="MonoTouch/Controllers/CatalogBaseController.cs" Line="30" Column="5" />
+      <File FileName="MonoTouch/Controllers/FeaturedViewController.cs" Line="7" Column="1" />
+      <File FileName="Satchmobile-Core/Repositories/ProductRepository.cs" Line="35" Column="19" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="MonoTouch-Demo" expanded="True">
-            <Node name="Controllers" expanded="True">
-              <Node name="CatalogBaseController.cs" selected="True" />
-            </Node>
-          </Node>
+          <Node name="MonoTouch-Demo" expanded="True" selected="True" />
         </State>
       </Pad>
       <Pad Id="ClassPad">
@@ -25,7 +26,9 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/jheerman/Projects/Satchmobile-Demo/src/MonoTouch/Controllers/FeaturedViewController.cs" line="35" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.MonoAndroid-Demo AndroidDeviceId-Debug="3530601EEE7200EC" />

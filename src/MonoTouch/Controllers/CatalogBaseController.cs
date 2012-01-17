@@ -2,7 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
-
+using MonoTouchCore;
+using SatchmobileCore;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 
@@ -30,7 +31,7 @@ namespace MonoTouchDemo
 		
 			public override int RowsInSection (UITableView tableview, int section)
 			{
-				return list.Count;
+				return list == null ? 0 : list.Count;
 			}
 		
 			public override UITableViewCell GetCell (UITableView tableView, NSIndexPath indexPath)

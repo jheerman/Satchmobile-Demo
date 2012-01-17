@@ -3,10 +3,10 @@ using System;
 using System.Net;
 using System.Threading;
 using System.IO;
+using System.Linq;
 using System.Collections.Generic;
-
-using Newtonsoft.Json;
-
+using SatchmobileCore;
+using MonoTouchCore;
 using MonoTouch.UIKit;
 using MonoTouch.Foundation;
 
@@ -14,6 +14,7 @@ namespace MonoTouchDemo
 {
 	public partial class RecentProductViewController : CatalogBaseController
 	{
+		ProductRepository<Product> _productRepository = new ProductRepository<Product>();
 		WaitingView _waiting = new WaitingView();
 		public RecentProductViewController () : base ("Recent Products", "RecentProductViewController", null)
 		{ }
@@ -31,7 +32,7 @@ namespace MonoTouchDemo
 			
 			ThreadPool.QueueUserWorkItem (state =>
 			{
-				var products = GetRecent ();
+				List<Product> products = _productRepository.GetRecent();
 				InvokeOnMainThread (() => 
 				{
 					recentList.DataSource = new TableViewDataSource(products);
@@ -44,23 +45,6 @@ namespace MonoTouchDemo
 		public override void ViewDidUnload ()
 		{
 			base.ViewDidUnload ();
-		}
-		
-		private List<Product> GetRecent()
-		{
-			try
-			{
-				using (Stream stream =  new WebClient().OpenRead("http://50.56.79.53/ws/product/view/recent"))
-					using (StreamReader reader = new StreamReader(stream))
-					{
-						var response = reader.ReadToEnd().ToString();
-						return JsonConvert.DeserializeObject<List<Product>>(response);
-					}
-			}
-			catch (Exception)
-			{
-				return null;
-			}
 		}
 		
 		public override bool ShouldAutorotateToInterfaceOrientation (UIInterfaceOrientation toInterfaceOrientation)

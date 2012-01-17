@@ -3,18 +3,21 @@ using System;
 using System.Net;
 using System.IO;
 using System.Threading;
+using System.Linq;
+using System.Collections.Generic;
 
-using Newtonsoft.Json;
+using MonoTouchCore;
+using SatchmobileCore;
 
 using MonoTouch.UIKit;
 using MonoTouch.Foundation;
-using System.Collections.Generic;
 
 namespace MonoTouchDemo
 {
 	public partial class FeaturedViewController : CatalogBaseController
 	{
 		WaitingView _waiting = new WaitingView();
+		ProductRepository<Product> _productRepository = new ProductRepository<Product>();
 		
 		public FeaturedViewController () : base ("Featured Products", "FeaturedViewController", null)
 		{ }
@@ -28,10 +31,10 @@ namespace MonoTouchDemo
 		{
 			base.ViewDidLoad ();
 			_waiting.Show ("Getting Featured Products.  Please wait...");
-			
+
 			ThreadPool.QueueUserWorkItem (state =>
 			{
-				var products = GetFeatured ();
+				List<Product> products = _productRepository.GetFeatured();
 				InvokeOnMainThread (() => 
 				{
 					featuredList.DataSource = new TableViewDataSource(products);
@@ -39,23 +42,6 @@ namespace MonoTouchDemo
 					_waiting.Hide ();
 				});
 			});
-		}
-		
-		private List<Product> GetFeatured()
-		{
-			try
-			{
-				using (Stream stream =  new WebClient().OpenRead("http://50.56.79.53/ws/featured"))
-					using (StreamReader reader = new StreamReader(stream))
-					{
-						var response = reader.ReadToEnd().ToString();
-						return JsonConvert.DeserializeObject<List<Product>>(response);
-					}
-			}
-			catch (Exception)
-			{
-				return null;
-			}
 		}
 		
 		public override void ViewDidUnload ()
