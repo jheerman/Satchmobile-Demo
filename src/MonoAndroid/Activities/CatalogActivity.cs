@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using System.Net;
 using System.IO;
 
+using SatchmobileCore;
+
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -23,6 +25,7 @@ namespace SatchmobileDemo
 	public class CatalogActivity : Activity
 	{
 		ProgressDialog _progressDialog;
+		ProductRepository<Product> _productRepository = new ProductRepository<Product>();
 		
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -41,53 +44,19 @@ namespace SatchmobileDemo
 				case "featured":
 					Task.Factory
 						.StartNew(() =>
-							GetFeaturedProducts(GetString(Resource.String.store_url)))
+							_productRepository.GetFeatured ())
 						.ContinueWith(task =>
 							RunOnUiThread(() => RenderProducts(task.Result)));
 					break;
 				case "recent":
 					Task.Factory
 						.StartNew(() =>
-							GetRecentAdditions(GetString(Resource.String.store_url)))
+							_productRepository.GetRecent())
 						.ContinueWith(task =>
 							RunOnUiThread(() => RenderProducts(task.Result)));
 					break;
 				default:
 					break;
-			}
-		}
-		
-		private List<Product> GetFeaturedProducts(string storeUrl)
-		{
-			try
-			{
-				using (Stream stream =  new WebClient().OpenRead(string.Format("{0}/ws/featured", storeUrl)))
-					using (StreamReader reader = new StreamReader(stream))
-					{
-						var response = reader.ReadToEnd().ToString();
-						return JsonConvert.DeserializeObject<List<Product>>(response);
-					}
-			}
-			catch (Exception)
-			{
-				return null;
-			}
-		}
-		
-		public List<Product> GetRecentAdditions (string storeUrl)
-		{
-			try
-			{
-				using (Stream stream =  new WebClient().OpenRead(string.Format("{0}/ws/product/view/recent", storeUrl)))
-					using (StreamReader reader = new StreamReader(stream))
-					{
-						var response = reader.ReadToEnd().ToString();
-						return JsonConvert.DeserializeObject<List<Product>>(response);
-					}
-			}
-			catch (Exception)
-			{
-				return null;
 			}
 		}
 		

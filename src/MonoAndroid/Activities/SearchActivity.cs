@@ -12,6 +12,7 @@ using Android.Views;
 using Android.Widget;
 using PM = Android.Content.PM;
 
+using SatchmobileCore;
 using Newtonsoft.Json;
 using System.Net;
 using System.IO;
@@ -25,6 +26,7 @@ namespace SatchmobileDemo
 	public class SearchActivity : Activity
 	{
 		ProgressDialog _progressDialog;
+		ProductRepository<Product> _productRepository = new ProductRepository<Product>();
 		
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -41,29 +43,12 @@ namespace SatchmobileDemo
 				
 				Task.Factory
 					.StartNew(() =>
-						ExecuteSearch(query))
+						_productRepository.Search (query))
 					.ContinueWith(task =>
 						RunOnUiThread(() => RenderResults(task.Result)));
 			}
 		}
-		private List<Product> ExecuteSearch (string query)
-		{
-			try
-			{
-				using (Stream stream =  new WebClient().OpenRead(
-							string.Format("{0}/ws/search/?include_categories=0&keywords={1}", 
-								GetString(Resource.String.store_url), query)))
-					using (StreamReader reader = new StreamReader(stream))
-					{
-						var response = reader.ReadToEnd().ToString();
-						return JsonConvert.DeserializeObject<List<Product>>(response);
-					}
-			}
-			catch (Exception)
-			{
-				return null;
-			}
-		}
+		
 		private void RenderResults (List<Product> products)
 		{
 			if (products == null || products.Count == 0)
