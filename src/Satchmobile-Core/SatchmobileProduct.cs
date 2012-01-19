@@ -1,12 +1,9 @@
 using System;
-using SatchmobileCore;
-using MonoTouch.Foundation;
 using Newtonsoft.Json;
 
-namespace MonoTouchCore
+namespace SatchmobileCore
 {
-	[Preserve(AllMembers=true)]
-	public class Product : ICatalogItem, IProduct
+	public abstract class SatchmobileProduct 
 	{
 		public int Id { get; set; }
 		public string Name { get; set; }
@@ -20,6 +17,8 @@ namespace MonoTouchCore
 		public string ThumbnailImageURL { get; set; }
 		public decimal Price { get; set; }
 		public string SKU { get; set; }
+		[JsonIgnore]
 		public int Rating { get; set; }
 	}
 }
+

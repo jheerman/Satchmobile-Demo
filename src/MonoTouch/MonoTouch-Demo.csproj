@@ -62,6 +62,9 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="monotouch" />
+    <Reference Include="NewtonsoftJsonMonoTouch">
+      <HintPath>..\..\lib\NewtonsoftJsonMonoTouch.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -91,6 +94,13 @@
     <Compile Include="Controllers\RecentProductViewController.designer.cs">
       <DependentUpon>RecentProductViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="..\Satchmobile-Core\SatchmobileProduct.cs">
+      <Link>Models\SatchmobileProduct.cs</Link>
+    </Compile>
+    <Compile Include="..\Satchmobile-Core\Repositories\ProductRepository.cs">
+      <Link>Models\ProductRepository.cs</Link>
+    </Compile>
+    <Compile Include="Models\Product.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Controllers\MainViewController.xib" />
@@ -103,6 +113,7 @@
   <ItemGroup>
     <Folder Include="Views\" />
     <Folder Include="Controllers\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Default%402x.png" />
@@ -110,11 +121,5 @@
   <ItemGroup>
     <EmbeddedResource Include="Images\Backgrounds\retina_aqua.png" />
     <EmbeddedResource Include="Images\Backgrounds\retina_splash.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\MonoTouch-Core\MonoTouch-Core.csproj">
-      <Project>{D8FD1B3B-39E0-43BE-8EB4-956112534F8C}</Project>
-      <Name>MonoTouch-Core</Name>
-    </ProjectReference>
   </ItemGroup>
 </Project>

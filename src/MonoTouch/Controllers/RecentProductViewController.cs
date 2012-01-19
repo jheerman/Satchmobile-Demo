@@ -6,7 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Collections.Generic;
 using SatchmobileCore;
-using MonoTouchCore;
+
 using MonoTouch.UIKit;
 using MonoTouch.Foundation;
 

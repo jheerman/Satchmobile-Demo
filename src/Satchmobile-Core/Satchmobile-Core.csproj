@@ -37,8 +37,8 @@
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="ICatalogItem.cs" />
-    <Compile Include="IProduct.cs" />
     <Compile Include="Repositories\ProductRepository.cs" />
+    <Compile Include="SatchmobileProduct.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

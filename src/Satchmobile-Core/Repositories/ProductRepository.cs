@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 
 namespace SatchmobileCore
 {
-	public class ProductRepository <T> where T: IProduct
+	public class ProductRepository <T> where T: SatchmobileProduct
 	{
 		public ProductRepository ()
 		{ }
@@ -19,8 +19,7 @@ namespace SatchmobileCore
 					using (StreamReader reader = new StreamReader(stream))
 					{
 						var response = reader.ReadToEnd().ToString();
-						var products = JsonConvert.DeserializeObject<List<T>>(response);
-						return products;
+						return JsonConvert.DeserializeObject<List<T>>(response);
 					}
 			}
 			catch (Exception)

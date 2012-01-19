@@ -2,12 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
-using MonoTouchCore;
-using SatchmobileCore;
+using System.Drawing;
+
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 
-using System.Drawing;
+using SatchmobileCore;
 
 namespace MonoTouchDemo
 {
@@ -42,7 +42,6 @@ namespace MonoTouchDemo
 				
 				var product = list[indexPath.Row];
 				var img = GetImage (product.ThumbnailImageURL);
-				
 				cell.ImageView.Image = img;
 				cell.TextLabel.Text = product.Name;
 				return cell;
