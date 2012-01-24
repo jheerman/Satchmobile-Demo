@@ -1,19 +1,20 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="MonoTouch/Controllers/CatalogBaseController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MonoAndroid/Activities/CatalogActivity.cs">
     <Files>
-      <File FileName="Satchmobile-Core/Repositories/ProductRepository.cs" Line="9" Column="37" />
-      <File FileName="MonoTouch/Controllers/CatalogBaseController.cs" Line="45" Column="37" />
+      <File FileName="MonoAndroid/Activities/CatalogActivity.cs" Line="22" Column="26" />
+      <File FileName="MonoAndroid/Resources/layout/Catalog.axml" Line="8" Column="17" />
+      <File FileName="MonoAndroid/Resources/layout/ProductList.axml" Line="13" Column="3" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="MonoTouch-Demo" expanded="True">
-            <Node name="Controllers" expanded="True">
-              <Node name="CatalogBaseController.cs" selected="True" />
+          <Node name="MonoAndroid-Demo" expanded="True" selected="True">
+            <Node name="Activities" expanded="True" />
+            <Node name="Resources" expanded="True">
+              <Node name="layout" expanded="True" />
             </Node>
           </Node>
-          <Node name="Satchmobile-Core" expanded="True" />
         </State>
       </Pad>
       <Pad Id="ClassPad">

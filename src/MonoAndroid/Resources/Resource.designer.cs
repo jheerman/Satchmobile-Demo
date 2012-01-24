@@ -35,6 +35,9 @@ namespace SatchmobileDemo
 			// aapt resource value: 0x7f020002
 			public const int shine = 2130837506;
 			
+			// aapt resource value: 0x7f020003
+			public const int splash = 2130837507;
+			
 			private Drawable()
 			{
 			}

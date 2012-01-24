@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace SatchmobileDemo
 {
-	[Activity (Label = "MainActivity", Theme="@style/Theme.Default")]
+	[Activity (Label = "MainActivity")]
 	[MetaData ("android.app.default_searchable", Value="satchmobiledemo.SearchActivity")]
 	public class MainActivity : Activity
 	{

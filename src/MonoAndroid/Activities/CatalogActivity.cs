@@ -21,7 +21,7 @@ using Newtonsoft.Json;
 
 namespace SatchmobileDemo
 {
-	[Activity (Label = "CatalogActivity", Theme="@style/Theme.Default", LaunchMode=PM.LaunchMode.SingleTask)]
+	[Activity (Label = "CatalogActivity", LaunchMode=PM.LaunchMode.SingleTask)]
 	public class CatalogActivity : Activity
 	{
 		ProgressDialog _progressDialog;

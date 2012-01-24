@@ -20,7 +20,7 @@ using Android.Graphics;
 
 namespace SatchmobileDemo
 {
-	[Activity (Label="Search Results", LaunchMode=PM.LaunchMode.SingleTask, Theme="@style/Theme.Default")]
+	[Activity (Label="Search Results", LaunchMode=PM.LaunchMode.SingleTask)]
 	[IntentFilter (new [] { "android.intent.action.SEARCH" })]
 	[MetaData ("android.app.searchable", Resource="@xml/searchable")]
 	public class SearchActivity : Activity
