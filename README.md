@@ -6,7 +6,7 @@ Satchmo [1] is a free, open source, online store built with Django[2].  Satchmob
 How this Demo Works
 ===============================
 
-This project was created to demonstrate how to render your Satchmo catalog natively using the RESTful Satchombile web service library.  The mobile apps were written in Mono for Android (M4A)[5] and MonoTouch[6] using C#.
+This project was created to demonstrate how to render your Satchmo catalog natively using the RESTful Satchmobile web service library.  The mobile apps were written in Mono for Android (M4A)[5] and MonoTouch[6] using C#.
 
 References
 ===============================
