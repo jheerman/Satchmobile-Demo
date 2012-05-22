@@ -1,7 +1,7 @@
 Satchmobile
 ===============================
 
-Satchmo [1] is a free, open source, online store built on Django[2].  Satchmobile [3] is a native mobile application that interfaces with RESTful web services[4] running on top of your Satchmo e-commerce site.  Satchmobile provides your customers with a native mobile interface to browse your Satchmo online catalog.  
+Satchmo [1] is a free, open source, online store built with Django[2].  Satchmobile [3] is a native mobile application for Android and iOS devices that interfaces with RESTful web services[4] running on top of your Satchmo e-commerce site.  Satchmobile provides your customers with a native mobile experience while browsing your Satchmo online catalog.  
 
 How this Demo Works
 ===============================
