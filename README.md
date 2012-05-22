@@ -28,9 +28,7 @@ Screenshots
 
 Android Screenshots
 ------------------------------
-![Satchmobile Demo Main] (https://github.com/jheerman/Satchmobile-Demo/raw/master/docs/screenshots/android/device_main.png)
-
-[Satchmobile Demo Featured](https://github.com/jheerman/Satchmobile-Demo/raw/master/docs/screenshots/android/device_featured.png)
+![Satchmobile Demo] (https://github.com/jheerman/Satchmobile-Demo/raw/master/docs/screenshots/android/SatchmobileDemo.png)
 
 info@satchommobile.com
 
