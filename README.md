@@ -23,9 +23,12 @@ References
 
 6: MonoTouch: http://xamarin.com/monotouch
 
-Android Screenshots
+Screenshots
 ===============================
-[Satchmobile Demo Main] (https://github.com/jheerman/Satchmobile-Demo/raw/master/docs/screenshots/android/device_main.png)
+
+Android Screenshots
+------------------------------
+![Satchmobile Demo Main] (https://github.com/jheerman/Satchmobile-Demo/raw/master/docs/screenshots/android/device_main.png)
 
 [Satchmobile Demo Featured](https://github.com/jheerman/Satchmobile-Demo/raw/master/docs/screenshots/android/device_featured.png)
 
