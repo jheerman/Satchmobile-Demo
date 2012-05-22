@@ -30,7 +30,7 @@ Android Screenshots
 ------------------------------
 ![Satchmobile Demo] (https://github.com/jheerman/Satchmobile-Demo/raw/master/docs/screenshots/android/SatchmobileDemo.png)
 
-info@satchommobile.com
+info@satchomobile.com
 
 Copyright (C) 2012 Satchmobile
 
