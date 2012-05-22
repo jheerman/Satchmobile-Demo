@@ -12,10 +12,15 @@ References
 ===============================
 
 1: Satchmo: https://bitbucket.org/chris1610/satchmo/src/
+
 2: Django: http://www.djangoproject.com
+
 3: Satchmobile: http://www.satchmobileapp.com
+
 4: Satchmobile RESTful Web Services: https://bitbucket.org/sclaughl/satchmobile
+
 5: Mono for Android: http://xamarin.com/monoforandroid
+
 6: MonoTouch: http://xamarin.com/monotouch
 
 Android Screenshots
