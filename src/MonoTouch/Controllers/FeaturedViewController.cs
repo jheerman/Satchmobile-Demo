@@ -16,10 +16,12 @@ namespace MonoTouchDemo
 	public partial class FeaturedViewController : CatalogBaseController
 	{
 		WaitingView _waiting = new WaitingView();
-		ProductRepository<Product> _productRepository = new ProductRepository<Product>();
+		ProductRepository<Product> _productRepository;
 		
 		public FeaturedViewController () : base ("Featured Products", "FeaturedViewController", null)
-		{ }
+		{ 
+			_productRepository = new ProductRepository<Product>();
+		}
 		
 		public override void DidReceiveMemoryWarning ()
 		{

@@ -22,28 +22,31 @@ namespace MonoTouchDemo
 		public class TableViewDataSource : UITableViewDataSource
 		{
 			static NSString cellIdentifier = new NSString ("productCell");
-			private List<Product> list;
+			private List<Product> _products;
 		
-			public TableViewDataSource (List<Product> list)
+			public TableViewDataSource (List<Product> products)
 			{
-				this.list = list;
+				_products = products;
 			}
 		
 			public override int RowsInSection (UITableView tableview, int section)
 			{
-				return list == null ? 0 : list.Count;
+				return _products == null ? 0 : _products.Count;
 			}
 		
 			public override UITableViewCell GetCell (UITableView tableView, NSIndexPath indexPath)
 			{
 				UITableViewCell cell = tableView.DequeueReusableCell (cellIdentifier);
 				if (cell == null)
-					cell = new UITableViewCell (UITableViewCellStyle.Default, cellIdentifier);
+					cell = new UITableViewCell (UITableViewCellStyle.Subtitle, cellIdentifier);
 				
-				var product = list[indexPath.Row];
+				var product = _products[indexPath.Row];
 				var img = GetImage (product.ThumbnailImageURL);
 				cell.ImageView.Image = img;
 				cell.TextLabel.Text = product.Name;
+				if (!string.IsNullOrEmpty (product.PriceRange))
+					cell.DetailTextLabel.Text = product.PriceRange;
+				
 				return cell;
 			}
 			

@@ -1,17 +1,13 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|iPhone" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="MonoTouch/AppDelegate.cs">
-    <Files>
-      <File FileName="MonoTouch/AppDelegate.cs" Line="14" Column="47" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Node name="MonoTouch-Demo" expanded="True">
             <Node name="Controllers" expanded="True">
-              <Node name="FeaturedViewController.cs" expanded="True" />
+              <Node name="CatalogBaseController.cs" selected="True" />
             </Node>
-            <Node name="AppDelegate.cs" selected="True" />
           </Node>
         </State>
       </Pad>
