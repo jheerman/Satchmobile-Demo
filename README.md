@@ -15,7 +15,7 @@ References
 
 2: Django: http://www.djangoproject.com
 
-3: Satchmobile: http://www.satchmobileapp.com
+3: Satchmobile: http://www.satchmobile.com
 
 4: Satchmobile RESTful Web Services: https://bitbucket.org/sclaughl/satchmobile
 
