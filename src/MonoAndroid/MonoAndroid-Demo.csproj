@@ -64,6 +64,7 @@
     <Compile Include="..\Satchmobile-Core\Repositories\ProductRepository.cs">
       <Link>Models\ProductRepository.cs</Link>
     </Compile>
+    <Compile Include="Activities\SatchmobileListActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

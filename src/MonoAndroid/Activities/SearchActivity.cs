@@ -16,14 +16,14 @@ using SatchmobileCore;
 using Newtonsoft.Json;
 using System.Net;
 using System.IO;
-using Android.Graphics;
+using G = Android.Graphics;
 
 namespace SatchmobileDemo
 {
 	[Activity (Label="Search Results", LaunchMode=PM.LaunchMode.SingleTask)]
 	[IntentFilter (new [] { "android.intent.action.SEARCH" })]
 	[MetaData ("android.app.searchable", Resource="@xml/searchable")]
-	public class SearchActivity : Activity
+	public class SearchActivity : SatchmobileListActivity
 	{
 		ProgressDialog _progressDialog;
 		ProductRepository<Product> _productRepository = new ProductRepository<Product>();
@@ -35,11 +35,9 @@ namespace SatchmobileDemo
 			_progressDialog.SetMessage("Searching.  Please wait...");
 			_progressDialog.Show();
 			
-			var intent = this.Intent;
-			
-			if (Intent.ActionSearch.Equals(intent.Action)) 
+			if (Intent.ActionSearch.Equals(Intent.Action)) 
 			{
-				string query = intent.GetStringExtra(SearchManager.Query);
+				string query = Intent.GetStringExtra(SearchManager.Query);
 				
 				Task.Factory
 					.StartNew(() =>
@@ -68,10 +66,8 @@ namespace SatchmobileDemo
 			else
 			{
 				SetContentView (Resource.Layout.SearchResults);
-				
-				var listView = FindViewById<ListView>(Resource.Id.searchResultList);
-				listView.SetBackgroundColor (Color.Transparent.ToArgb());
-				listView.Adapter = new ProductListAdapter(this, products);
+				ListView.SetBackgroundColor (G.Color.Transparent);
+				ListAdapter = new ProductListAdapter(this, products);
 				_progressDialog.Dismiss ();
 			}
 		}

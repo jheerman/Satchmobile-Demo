@@ -1,19 +1,17 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="MonoAndroid/Activities/CatalogActivity.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|iPhone" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="MonoTouch/AppDelegate.cs">
     <Files>
-      <File FileName="MonoAndroid/Activities/CatalogActivity.cs" Line="22" Column="26" />
-      <File FileName="MonoAndroid/Resources/layout/Catalog.axml" Line="8" Column="17" />
-      <File FileName="MonoAndroid/Resources/layout/ProductList.axml" Line="13" Column="3" />
+      <File FileName="MonoTouch/AppDelegate.cs" Line="14" Column="47" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="MonoAndroid-Demo" expanded="True" selected="True">
-            <Node name="Activities" expanded="True" />
-            <Node name="Resources" expanded="True">
-              <Node name="layout" expanded="True" />
+          <Node name="MonoTouch-Demo" expanded="True">
+            <Node name="Controllers" expanded="True">
+              <Node name="FeaturedViewController.cs" expanded="True" />
             </Node>
+            <Node name="AppDelegate.cs" selected="True" />
           </Node>
         </State>
       </Pad>
@@ -34,5 +32,5 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.MonoAndroid-Demo AndroidDeviceId-Debug="3530601EEE7200EC" />
+  <MonoDevelop.Ide.ItemProperties.MonoAndroid-Demo AndroidDeviceId-Debug="3530601EEE7200EC" MonoForAntroid.PreferredDevice="3.7in WVGA (Nexus One)" />
 </Properties>

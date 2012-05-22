@@ -22,7 +22,7 @@ using Newtonsoft.Json;
 namespace SatchmobileDemo
 {
 	[Activity (Label = "CatalogActivity", LaunchMode=PM.LaunchMode.SingleTask)]
-	public class CatalogActivity : Activity
+	public class CatalogActivity : SatchmobileListActivity
 	{
 		ProgressDialog _progressDialog;
 		ProductRepository<Product> _productRepository = new ProductRepository<Product>();
@@ -42,6 +42,7 @@ namespace SatchmobileDemo
 			switch (action)
 			{
 				case "featured":
+					Title = "Featured Products";
 					Task.Factory
 						.StartNew(() =>
 							_productRepository.GetFeatured ())
@@ -49,6 +50,7 @@ namespace SatchmobileDemo
 							RunOnUiThread(() => RenderProducts(task.Result)));
 					break;
 				case "recent":
+					Title = "Recent Additions";
 					Task.Factory
 						.StartNew(() =>
 							_productRepository.GetRecent())
@@ -63,10 +65,8 @@ namespace SatchmobileDemo
 		private void RenderProducts (List<Product> products)
 		{
 			if (products != null)
-			{
-				var listView = FindViewById<ListView>(Resource.Id.catalogList);
-				listView.Adapter = new ProductListAdapter(this, products);
-			}
+				ListAdapter = new ProductListAdapter(this, products);
+			
 			_progressDialog.Dismiss ();
 		}
 	}

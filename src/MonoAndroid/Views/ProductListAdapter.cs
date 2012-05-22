@@ -16,7 +16,7 @@ using System;
 
 namespace SatchmobileDemo
 {
-	public class ProductListAdapter : BaseAdapter  
+	public class ProductListAdapter : BaseAdapter
 	{
 		private Activity _context;
 		private List<Product> _products;
@@ -57,8 +57,8 @@ namespace SatchmobileDemo
 			try
 			{
 				var imageUrl = string.Format("{0}/{1}", 
-				_context.Resources.GetString(Resource.String.store_url), 
-				product.ThumbnailImageURL);
+							_context.Resources.GetString(Resource.String.store_url), 
+							product.ThumbnailImageURL);
 				
 				HttpWebRequest request = (HttpWebRequest) HttpWebRequest.Create(imageUrl);
 				using (HttpWebResponse response = (HttpWebResponse) request.GetResponse())
@@ -73,13 +73,13 @@ namespace SatchmobileDemo
 						view.FindViewById<ImageView>(Resource.Id.productListImage).SetImageDrawable(image);
 					}
 			}
-			catch (Exception)
-			{
-			}
+			catch 
+			{ }
 			
+			var rand = new Random();
+			view.FindViewById<RatingBar>(Resource.Id.productListRating).Rating = rand.Next (0, 5);
 			view.FindViewById<TextView>(Resource.Id.productListName).Text = product.Name;
 			view.FindViewById<TextView>(Resource.Id.productListPriceRange).Text = product.PriceRange;
-			
 			return view;
 		}
 	}

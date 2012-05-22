@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace SatchmobileDemo
 {
-	[Activity (Label = "MainActivity")]
+	[Activity (Label = "Home")]
 	[MetaData ("android.app.default_searchable", Value="satchmobiledemo.SearchActivity")]
 	public class MainActivity : Activity
 	{
@@ -23,7 +23,7 @@ namespace SatchmobileDemo
 			
 			var featured = FindViewById<Button>(Resource.Id.cmdFeatured);
 			
-			featured.Click += delegate {
+			featured.Click += (sender, e) => {
 				var intent = new Intent();
 				intent.SetClass (this, typeof(CatalogActivity));
 				intent.PutExtra("action", "featured");
@@ -32,19 +32,17 @@ namespace SatchmobileDemo
 			
 			var recent = FindViewById<Button>(Resource.Id.cmdRecent);
 			
-			recent.Click += delegate {
+			recent.Click += (sender, e) => {
 				var intent = new Intent();
 				intent.SetClass (this, typeof(CatalogActivity));
 				intent.PutExtra("action", "recent");
 				StartActivity(intent);
 			};
 			
-			FindViewById<Button>(Resource.Id.cmdSearch).Click += delegate
+			FindViewById<Button>(Resource.Id.cmdSearch).Click += (sender, e) =>
 				{
 					StartSearch (null, false, null, false);
 				};
-			
-			
 		}
 	}
 }
